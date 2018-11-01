@@ -1,0 +1,29 @@
+
+<form class="form-bank" [formGroup]="applyForCreditForm" (ngSubmit)="onSubmit(id, salary, dateInCompany)">
+  <h1 class="title">SOLICITA TU CRÉDITO</h1>
+
+  <input id="id" class="form-control"
+         formControlName="id" placeholder="Número de identificación" required>
+  <app-input-error [customInput]=id></app-input-error>
+
+  <input id="companyName" class="form-control"
+         formControlName="companyName" placeholder="Nombre de la empresa" required>
+  <app-input-error [customInput]=companyName></app-input-error>
+
+  <input id="companyNit" class="form-control"
+         formControlName="companyNit" placeholder="NIT de la empresa">
+  <app-input-error [customInput]=companyNit></app-input-error>
+
+  <input id="salary" class="form-control"
+         formControlName="salary" placeholder="Salario" required>
+  <app-input-error [customInput]=salary></app-input-error>
+
+  <input type="date" [max]=maximunDate id="dateInCompany" class="form-control"
+         formControlName="dateInCompany" placeholder="AAAA-MM-DD" required>
+  <app-input-error [customInput]=dateInCompany></app-input-error>
+
+  <button class="my-btn" type="submit" [disabled]="!applyForCreditForm.valid">Solicitar</button>
+
+</form>
+
+

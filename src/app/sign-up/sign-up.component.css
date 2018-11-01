@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.form-bank {
+  background-color: #eee;
+  width: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  border: 0px solid;
+  box-shadow: 0px 0px 6px dodgerblue;
+
+}
+.title{
+  font-size: 16pt;
+  text-align: center;
+  margin-top:0;
+  font-weight: bold;
+}
+.form-control {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  border-radius: 50px;
+  box-shadow: none;
+  border: 2px;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: 0.3s
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.my-btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 2px;
+}
+
+.my-btn:disabled,
+.my-btn[disabled]{
+  background-color: #d0d0d0;
+  color: #b6b6b6
+}

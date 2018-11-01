@@ -1,0 +1,17 @@
+<div class="error-input" *ngIf="customInput.invalid && (customInput.dirty || customInput.touched)"
+     class="alert alert-danger">
+  <div class="error-input" *ngIf="!!customInput.errors.required">
+    Este campo no puede estar vacío
+  </div>
+  <div class="error-input" *ngIf="!!customInput.errors.pattern">
+    Este dato no tiene un formato correcto
+  </div>
+  <div class="error-input" *ngIf="!!customInput.errors.max">
+    El valor excede límite permitido
+  </div>
+
+  <div class="error-input" *ngIf="!!customInput.errors.forbiddenDate">
+    La fecha ingresada es menor a la esperada
+  </div>
+
+</div>

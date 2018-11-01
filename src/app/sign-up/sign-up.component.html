@@ -1,0 +1,28 @@
+
+
+
+<form class="form-bank" [formGroup]="signUpForm" (ngSubmit)="onSubmit(id)">
+
+  <h1 class="title">REGISTRO</h1>
+  <input  id="id" class="form-control"
+         formControlName="id" placeholder="Número de identificación" required>
+  <app-input-error [customInput]=id></app-input-error>
+
+  <input id="firstName" class="form-control"
+         formControlName="firstName" placeholder="Nombre">
+  <app-input-error [customInput]=firstName></app-input-error>
+
+  <input id="lastName" class="form-control"
+         formControlName="lastName" placeholder="Apellido" required>
+  <app-input-error [customInput]=lastName></app-input-error>
+
+  <input type="date" [max]=maximunDate id="birthDay" class="form-control"
+         formControlName="birthDay" placeholder="AAAA-MM-DD" required>
+  <app-input-error [customInput]=birthDay></app-input-error>
+
+
+  <button type="submit" class="my-btn" [disabled]="!signUpForm.valid">Registrarse</button>
+
+</form>
+
+
